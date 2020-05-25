@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 
-<html>
-
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
     <link rel="icon" href="/img/weather.png">
-    <link rel="stylesheet" href="/css/style.css">
-    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 </head>
 
 <body>
-    <div class="main-content">
-     {{>header}}
-     
-     <p>Use this site to get your weather</p>
-     <form>
-         <div >
-         <input placeholder="Location">
-         <button >Search</button>
-         </div>
-     </form>
+    <span class="cloud">☁️</span>
+    <span class="sun">☀️</span>
+    <span class="bolt">⚡</span>
+    <span class="rain">🌧️</span>
+    <section class="section" style="margin-top: -15px;">
+        <div class="container">
+            <div class="card" style="width: 500px;">
+                <div class="card-content">
+                    <div class="form-body container">
+                        <div class="container has-text-centered" style="margin-bottom: 90px;">
+                            <h1 class="title">
+                                Weather
+                            </h1>
+                        </div>
+                        <form class="has-text-centered">
+                            <div class="input-group input-group-lg" style="margin-top:20px;margin-bottom:20px;">
+                                <input class="input is-rounded" type="text" placeholder="Try 'Marine Drive'">
+                            </div>
+                            <button class="button is-black is-warning ">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-     <p id="message-1"></p>
-     <p id="message-2"></p>
-     </div>
+        <section class="section" style="margin-top:40px">
+            <div class="card">
+                <div class="card-content">
+                    <div class="form-body container">
+                        <p id="message-1"></p>
+                        <p id="message-2"></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
 
-     {{>footer}}
+        
+    </section>
 
-<script src="/js/app.js"></script>
+    <footer id="footer">
+        <p>
+            Made by <a href="https://maryamtb.herokuapp.com/"
+                style="color: black;border: 2px solid hsl(48, 100%, 67%);  background-color:hsl(48, 100%, 67%);">MTB.</a>
+        </p>
+        </p>
+    </footer>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
